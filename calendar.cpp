@@ -1,19 +1,23 @@
 // SONNET: ETERNAL MONTHLY CALENDAR SINCE MAY 1916
 // Size (14x50)           Microsoft Visual C++ 6.0
 
-#include <iostream.h> 
+// Adapted to GCC 13.2, -fpermissive flag required
+
+#include <iostream>
+#define r0 return 0;
+using namespace std;
 char *N[12]={"January","February","March","April",
 "May","June","July","August","September","October"
 ,"November","December"},C[14]="~>:><><>><><>",a,i;
 
 char D[9]="SMTWTFS\n",*Q="\nY M = ",*q=" >",R[22],
 w,z=48;  int y=1916,m=4,d=1,Y,M,S,s,g,p,b=12,k=21;
-n() {C[2]=56+(y%4?0:y%400?y%100?2:0:2); ++d>C[m]/2
-?m+=d=1:0; m>12?y+=m=1:0;} u(){cout<<R<<"\n";s=1;}
+n(){C[2]=56+(y%4?0:y%400?y%100?2:0:2);++d>C[m]/2?m
++=d=1:0;m>12?y+=m=1:0;r0}u(){cout<<R<<"\n";s=1;r0}
 
-h(){cout<<"\n";for(i=0;i<8;i++) cout<<"  "<<D[i];}
+h(){cout<<*Q;for(i=0;i<8;i++) cout<<"  "<<D[i];r0}
 r(){for(w=i=0;i<k;)n(),i?0:s=d^1,R[i++]=' ',R[i++]
-=z+d/10,R[i++]=z+d%10,p|=w|=g=y*b+m==S;  w?u():0;}
+=z+d/10,R[i++]=z+d%10,p|=w|=g=y*b+m==S;w?u():0;r0}
 
 main(){cout<<Q,cin>>Y>>M;Y<=y?Y=y,M=5:0;while(M>b?
 Y+=M=1:0,S=Y*b+M, cout<<"\n\n"<<Y<<" "<<N[M-1]<<q,
@@ -22,15 +26,18 @@ cin>>a,a!='<'){h();s||u();while(!p||g)r();g=M++;}}
                     // Copyright @ D.D.Dobrev 2010
                     //     dobrev@fmi.uni-sofia.bg
 
+                    // Adapted by T. Trifonov 2024
+                    //    triffon@fmi.uni-sofia.bg
+
 /*  VOCABULARY:
 
-main() - Main control following the dialogue. 
-h()    - Prints the 7 initials of the week days. 
-n()    - Determines the consecutive calendar date. 
-r()    - Constructs a row of 7 week dates. 
-u()    - Prints a constructed week row.  
+main() - Main control following the dialogue.
+h()    - Prints the 7 initials of the week days.
+n()    - Determines the consecutive calendar date.
+r()    - Constructs a row of 7 week dates.
+u()    - Prints a constructed week row.
 
-*N[12]    =  Set of the 12 month names. 
+*N[12]    =  Set of the 12 month names.
 C[1+12+@] =  Set of the 12 doubled month lenghts.
 D[7+1+@]  =  Set of initials of the 7 week days.
 Q[7+@]    =  Question about seeked year & month.
