@@ -38,36 +38,36 @@ r()    - Constructs a row of 7 week dates.
 u()    - Prints a constructed week row.
 
 *N[12]    =  Set of the 12 month names.
-C[1+12+@] =  Set of the 12 doubled month lenghts.
+C[1+12+@] =  Set of the 12 doubled month lengths.
 D[7+1+@]  =  Set of initials of the 7 week days.
-Q[7+@]    =  Question about seeked year & month.
+Q[7+@]    =  Question about sought year & month.
 q[2+@]    =  Question about prolongation.
 R[7*3+@]  -  Space to construct a row of 7 calendar dates.
 
 a         -  Answer.
 y,m,d     =  1916,05,01   Start/current calendar date.
-Y,M       -  The seeked month.
-S         -  The seeked month (packaged with the year).
+Y,M       -  The sought month.
+S         -  The sought month (packaged with the year).
 
-s==0      -  The current month starts on sunday.
-g!=0      -  The last day is in the seeked month.
-w!=0      -  The current week overlaps the seeked month.
-p!=0      -  The seeked month is already reached.
+s==0      -  The current month starts on Sunday.
+g!=0      -  The last day is in the sought month.
+w!=0      -  The current week overlaps the sought month.
+p!=0      -  The sought month is already reached.
 
 b         =  12    Months number.
 k         =  21    Limit position in R[].
 z         =  '0'   The base digit.
-i         -  Iteration parametar.
+i         -  Iteration parameter.
 */
 
 
 
 /* AN EXECUTION RECORD:
 
-Y M = 2010 12      //  Dialog to fix the seeked month.
+Y M = 2010 12      //  Dialog to fix the sought month.
 
 
-2010 December >>   //  Offer acsepted by '>'.
+2010 December >>   //  Offer accepted by '>'.
 
   S  M  T  W  T  F  S
  28 29 30 01 02 03 04
@@ -77,7 +77,7 @@ Y M = 2010 12      //  Dialog to fix the seeked month.
  26 27 28 29 30 31 01
 
 
-2011 January >>    //  Prolongation acsepted by '>'.
+2011 January >>    //  Prolongation accepted by '>'.
 
   S  M  T  W  T  F  S
  02 03 04 05 06 07 08
@@ -87,7 +87,7 @@ Y M = 2010 12      //  Dialog to fix the seeked month.
  30 31 01 02 03 04 05
 
 
-2011 February >>   //  Prolongation acsepted by '>'.
+2011 February >>   //  Prolongation accepted by '>'.
 
   S  M  T  W  T  F  S
  06 07 08 09 10 11 12
