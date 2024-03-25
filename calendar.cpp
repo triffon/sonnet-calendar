@@ -52,10 +52,10 @@ S         -  The seeked month (packaged with the year).
 s==0      -  The current month starts on sunday.
 g!=0      -  The last day is in the seeked month.
 w!=0      -  The current week overlaps the seeked month.
-p!=0      -  The seeked month is already reached. 
+p!=0      -  The seeked month is already reached.
 
 b         =  12    Months number.
-k         =  21    Limit position in R[].  
+k         =  21    Limit position in R[].
 z         =  '0'   The base digit.
 i         -  Iteration parametar.
 */
@@ -97,6 +97,6 @@ Y M = 2010 12      //  Dialog to fix the seeked month.
 
 
 2011 March ><      //  Prolongation refused by '<'.
-Press any key to continue  
+Press any key to continue
 
 */
